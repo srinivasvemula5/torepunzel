@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
-    "target": "ESNext",                     // Modern JS output
-    "module": "ESNext",                     // Module system used by Vite
-    "moduleResolution": "Node",             // Resolve modules like Node
-    "jsx": "react-jsx",                      // React 17+ JSX transform
-    "strict": true,                          // Enable strict type-checking
-    "esModuleInterop": true,                 // Fixes default import issues
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,                    // Skip type checking of node_modules
-    "allowJs": true,                         // Allow JavaScript files
-    "noUnusedLocals": false,                 // Ignore unused variables (temp workaround)
-    "noUnusedParameters": false,             // Ignore unused parameters (temp workaround)
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "types": ["node", "vite/client"],        // Include Node and Vite types
-    "lib": ["ESNext", "DOM"]                 // Support Map, Set, WeakMap, Iterable, DOM APIs
+    "types": ["node", "vite/client"],
+    "lib": ["ESNext", "DOM"]
   },
   "include": ["src"]
 }
