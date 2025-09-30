@@ -1,10 +1,21 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "strict": true
+    "target": "ESNext",                     // Modern JS output
+    "module": "ESNext",                     // Module system used by Vite
+    "moduleResolution": "Node",             // Resolve modules like Node
+    "jsx": "react-jsx",                      // React 17+ JSX transform
+    "strict": true,                          // Enable strict type-checking
+    "esModuleInterop": true,                 // Fixes default import issues
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,                    // Skip type checking of node_modules
+    "allowJs": true,                         // Allow JavaScript files
+    "noUnusedLocals": false,                 // Ignore unused variables (temp workaround)
+    "noUnusedParameters": false,             // Ignore unused parameters (temp workaround)
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["node", "vite/client"],        // Include Node and Vite types
+    "lib": ["ESNext", "DOM"]                 // Support Map, Set, WeakMap, Iterable, DOM APIs
   },
   "include": ["src"]
 }
