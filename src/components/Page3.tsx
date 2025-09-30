@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 type Props = {
   accepted: boolean;
   setAccepted: React.Dispatch<React.SetStateAction<boolean>>;
@@ -88,20 +86,16 @@ function Page3({ accepted, setAccepted, onNext, onBack }: Props) {
             </button>
           </div>
           <div className="detail-image">
-            <img src={page3Data[selected - 1].img} alt="detail" />
+            <img src={page3Data[selected - 1].img} alt={page3Data[selected - 1].title} />
           </div>
         </div>
       )}
 
-      <div className="nav-buttons">
+      <div className="nav-buttons" style={{ marginTop: "20px" }}>
         <button className="love-button" onClick={onBack}>
           ⬅ Back
         </button>
-        <button
-          className="love-button"
-          onClick={onNext}
-          disabled={!accepted} // enabled once a card is clicked
-        >
+        <button className="love-button" onClick={onNext} disabled={!accepted}>
           Finally ➡️
         </button>
       </div>
