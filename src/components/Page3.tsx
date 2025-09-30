@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 type Props = {
   accepted: boolean;
   setAccepted: React.Dispatch<React.SetStateAction<boolean>>;
@@ -54,7 +56,7 @@ function Page3({ accepted, setAccepted, onNext, onBack }: Props) {
   const [selected, setSelected] = useState<number | null>(null);
 
   const handleSelect = (id: number) => {
-    setSelected(prev => (prev === id ? null : id));
+    setSelected((prev: number | null) => (prev === id ? null : id));
     if (!accepted) setAccepted(true); // auto-accept on click
   };
 
@@ -64,7 +66,7 @@ function Page3({ accepted, setAccepted, onNext, onBack }: Props) {
 
       {!selected ? (
         <div className="card-grid">
-          {page3Data.map(card => (
+          {page3Data.map((card) => (
             <div
               key={card.id}
               className="love-card"
