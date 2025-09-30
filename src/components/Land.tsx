@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
 import Page3 from "./Page3";
@@ -23,7 +23,7 @@ function Land() {
   return (
     <div className={`love-wrapper ${page === 0 ? "page-0" : ""}`}>
       <audio ref={audioRef} src="/audio/song.mp3" loop />
-      
+
       {/* Floating hearts */}
       <div className="hearts">
         {[
@@ -39,7 +39,13 @@ function Land() {
         <div className="page land-page">
           <p className="audio-note">🎵 Make sure your desktop audio is on! or use headphones 🎵</p>
           <h1 className="title">💖 Welcome Repunzel! 💖</h1>
-          <button className="love-button" onClick={() => { setPage(1); audioRef.current?.play(); }}>
+          <button
+            className="love-button"
+            onClick={() => {
+              setPage(1);
+              audioRef.current?.play();
+            }}
+          >
             Lets Start 💌
           </button>
         </div>
